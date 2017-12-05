@@ -24,10 +24,10 @@ public class SuperArray implements List //new syntax comin' in hot
     private int _size;    //number of elements in this SuperArray
 
 
-    //default constructor – initializes 10-item array
+    //default constructor â€“ initializes 10-item array
     public SuperArray()
     {
-	_data = new int[10];
+	_data = new Object[10];
 	_size = 0;
     }
 
@@ -50,7 +50,7 @@ public class SuperArray implements List //new syntax comin' in hot
     //double capacity of SuperArray
     private void expand()
     {
-	int[] temp = new int[ _data.length * 2 ];
+	Object[] temp = new Object[ _data.length * 2 ];
 	for( int i = 0; i < _data.length; i++ )
 	    temp[i] = _data[i];
 	_data = temp;
@@ -58,7 +58,7 @@ public class SuperArray implements List //new syntax comin' in hot
 
 
     //accessor -- return value at specified index
-    public int get( int index )
+    public Object get( int index )
     {
 	if(index < 0 || index >= size())
 	    {
@@ -70,7 +70,7 @@ public class SuperArray implements List //new syntax comin' in hot
 
     //mutator -- set value at index to newVal,
     //           return old value at index
-    public int set( int index, Object o )
+    public Object set( int index, Object o )
     {
 	if(index < 0 || index >= size())
 	    {
@@ -93,6 +93,7 @@ public class SuperArray implements List //new syntax comin' in hot
     //inserts an item at index
     public void add( int index, Object o)
     {
+	_size += 1;
 	if(index < 0 || index >= size())
 	    {
 	    throw new IndexOutOfBoundsException ("I'm starting to get sick of you people. You input an invalid index into add().");
@@ -104,13 +105,12 @@ public class SuperArray implements List //new syntax comin' in hot
 	    _data[i] = _data[i-1]; //each slot gets value of left neighbor
 	}
 	_data[index] = o;
-	_size++;
     }
 
 
     //removes the item at index
     //shifts elements left to fill in newly-empted slot
-    public int remove( int index )
+    public Object remove( int index )
     {
 	if(index < 0 || index >= size())
 	    {
@@ -135,15 +135,15 @@ public class SuperArray implements List //new syntax comin' in hot
     public static void main( String[] args )
     {
  
-	ListInt mayfield = new SuperArray();
+	List mayfield = new SuperArray();
 	System.out.println("Printing empty SuperArray mayfield...");
 	System.out.println(mayfield);
 
-	mayfield.add(5);
-	mayfield.add(4);
-	mayfield.add(3);
-	mayfield.add(2);
-	mayfield.add(1);
+	mayfield.add("I");
+	mayfield.add("Said");
+	mayfield.add("Hey");
+	mayfield.add("What's");
+	mayfield.add("you complete it");
 
 	System.out.println("Printing populated SuperArray mayfield...");
 	System.out.println(mayfield);
@@ -186,11 +186,10 @@ public class SuperArray implements List //new syntax comin' in hot
 	System.out.println("Nah, let's remove it. What does that return?");
 	System.out.println(mayfield.remove(3)); //5
 
-	//it all works
+	//it all works :)
 	
     }//end main()
 
 
 }//end class
-
 
