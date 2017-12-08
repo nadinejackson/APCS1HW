@@ -24,7 +24,7 @@ public class SuperArray implements List //new syntax comin' in hot
     private int _size;    //number of elements in this SuperArray
 
 
-    //default constructor â€“ initializes 10-item array
+    //default constructor – initializes 10-item array
     public SuperArray()
     {
 	_data = new Object[10];
@@ -192,4 +192,5 @@ public class SuperArray implements List //new syntax comin' in hot
 
 
 }//end class
+
 

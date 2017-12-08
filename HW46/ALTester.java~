@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+
+public class ALTester
+{
+    public static void populate(int[] array)
+    {
+	for(int i = 0; //go through each index
+	    i < array.length;
+	    i += 1)
+	    {
+		array[i] = (int) (Math.random() * 10); //overwrite that index to random int from 0 to 10
+	    }
+    }
+    public static String makeString(int[] array)
+    {
+	String retStr = ""; //returned string
+	for (int i = 0; //visit each index in the array
+	     i < array.length - 1;
+	     i += 1)
+	    {
+		retStr += array[i] + ", "; //add the int at the location and ", "
+	    }
+	retStr += array[array.length - 1]; //don't need a comma after last element
+	return "[" + retStr + "]"; //add brackets to make it look like an array
+    }
+    public static boolean isSorted(){}
+    public static void main(String[] args)
+    {
+	int[] lilSammy = new int[23];
+	populate(lilSammy);
+	System.out.println(makeString(lilSammy));
+    }
+}

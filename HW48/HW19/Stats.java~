@@ -1,0 +1,121 @@
+// Shayan Chowdhury
+// APCS1 pd2
+// HW11 -- stAtistically sPeaking
+// 2017-10-06
+
+public class Stats {
+    //Stats methods
+    public static int mean(int a, int b) { //returns the mean of two ints
+        return((a + b) / 2);
+    }
+    
+    public static double mean(double a, double b) { //returns the mean of two doubles
+        return((a + b) / 2);
+    }
+    
+    public static int max(int a, int b) { //returns the max of two ints
+        if (a > b) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+    
+    public static double max(double a, double b) { //returns the max of two doubles
+        if (a > b) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+    
+    public static int geoMean(int a, int b) { //returns the geometric mean of two ints as an approximate (truncated) int
+       return (int)Math.sqrt(a * b);
+    }
+    
+    public static double geoMean(double a, double b) { //returns the geometric mean of two doubles
+        return Math.sqrt(a * b);
+    }
+
+    //gcd
+    public static int gcd(int a, int b) {
+	if (a % b == 0) {
+	    return a;
+	} else {
+	    while (a != 0 && b != 0) {
+		if (a > b) {
+		    a -= b;
+		} else {
+		    b -= a;
+		} 
+	    }
+	    if (a == 0) {
+		return b;
+	    } else {
+		return a;
+	    }
+	}
+    } 
+
+    //augmented methods
+    public static int mean(int a, int b, int c) { //returns the mean of three ints
+        return((a + b + c) / 3);
+    }
+    
+    public static double mean(double a, double b, double c) { //returns the mean of three doubles
+        return((a + b + c) / 3);
+    }
+
+    public static int max (int a, int b, int c) { //returns the max of three ints
+	int num = max(a, b);
+	return max(num, c);
+    }
+    
+     public static double  max (double a, double b, double  c) { //returns the max of three doubles
+    double num = max(a, b);
+    return max(num, c);
+    }
+    
+    public static int geoMean(int a, int b, int c) { //returns the geometric mean of three ints as an approximate (truncated) int
+	return (int) Math.pow((a * b * c), 3);
+    }
+    
+    public static double geoMean(double a, double b, double c) { //returns the geometric mean of three doubles
+        return Math.pow((a * b * c), 3);
+    }
+  
+    public static void main (String[] args) { //tests out all the above stat methods
+	/*        //testing all the methods that return int
+        System.out.println(mean(2, 4));
+        System.out.println(max(32, 23));
+        System.out.println(geoMean(72, 96));
+
+        System.out.println(); //divider line
+        
+        //testing all the methods that return double
+        System.out.println(mean(2.85244, 4.2153));
+        System.out.println(max(55.55, 55.5));
+        System.out.println(geoMean(80.994, 144.5321));
+      
+      	System.out.println("\n"); //divider line
+      
+      	//testing the augmented methods
+      	//testing the methods that return int
+      	System.out.println(mean (2, 3, 4));
+      	System.out.println(max (99, 100, 100));
+      	System.out.println(geoMean(123, 456, 789));
+      
+      	System.out.println(); //divider line
+      
+      	//testing the methods that return double
+      	System.out.println(mean (2.453, 3.544, 4.1245));
+      	System.out.println(max (81.325, 96.9698, 81.325));
+      	System.out.println(geoMean(987.654, 321.098, 765.432));
+	*/
+	//testing gcd
+	System.out.println(gcd(17, 21));
+	System.out.println(gcd(16, 64));
+	System.out.println(gcd(18, 24));
+    }
+}
+    

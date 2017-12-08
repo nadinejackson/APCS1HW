@@ -1,0 +1,32 @@
+//Nadine Jackson
+//APCS1 pd02
+//HW06 -- On Big Sib Individuality and the Elimination of Radio Fuzz
+//2017-09-25
+
+public class Greet {
+    public static void main( String[] args ) {
+        BigSib leah = new BigSib("Word up"); //creating a new instance of class BigSib
+	BigSib topher = new BigSib("What's happenin'");
+	BigSib yulia = new BigSib();
+        BigSib sam = new BigSib();
+
+	greeting = leah.greet("seal pup"); //and also call the other function
+	System.out.println(greeting1); //and we've done the first greeting
+
+
+	greeting = topher.greet("captain");
+	System.out.println(greeting);
+	
+
+	yulia.setHelloMsg("Oh hi");
+
+	greeting = yulia.greet("french fry");
+	System.out.println(greeting);
+
+
+	sam.setHelloMsg("Salutations");
+
+	greeting = sam.greet("person not currently on the International Space Station");
+	System.out.println(greeting);
+    }
+}
