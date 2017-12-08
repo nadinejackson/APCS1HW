@@ -1,7 +1,0 @@
-public class Greet {
-    public static void main(String[] args) {
-	System.out.println(BigSib.greet("<marquee>de Lafayette</marquee>"));
-	System.out.println(BigSib.greet("Homework Overlords"));
-	System.out.println(BigSib.greet("<insert creative name here>"));
-    }
-}
