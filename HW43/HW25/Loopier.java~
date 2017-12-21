@@ -1,0 +1,53 @@
+public class Loopier
+{
+    public static void populate(int[] array)
+    {
+    }
+    public static String makeString(int[] array)
+    {
+	String retStr = "";
+	for (int i = 0;
+	     i < array.length;
+	     i += 1)
+	    {
+		retStr += array[i] + ", ";
+	    }
+	return retStr;
+    }
+    public static int linSearch(int[] a, int target)
+    {
+	for (int i = 0;
+	     i < a.length;
+	     i += 1)
+	    {
+		if (a[i] == target)
+		    {
+			return i;
+		    }
+	    }
+	return -1;
+    }
+    public static int linSearchR(int[] a, int target)
+    {
+	if (a.length < 1)
+	    {
+		return -1;
+	    }
+	int[] newArray = new int[a.length - 1];
+	for (i = 0;
+	     i < a.length - 1;
+	     i += 1)
+	    {
+		newArray[i] = a[i + 1];
+	    }
+	return 1 + linSearchR(newArray, target);
+    }
+    public static void main(String[] args)
+    {
+	
+	System.out.println(linSearchR([0, 1, 2, 3, 4, 5], 5));
+	System.out.println(linSearch([0, 3, 4, 5, 6], 3));
+	System.out.println(linSearchR([4, 5, 6, 3, 56, 6, 64, 54], 55));
+	System.out.println(linSearch([1, 4, 2, 5, 7, 84], 0));
+    }
+}

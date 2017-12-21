@@ -1,0 +1,9 @@
+public class Coin{
+    private double value;
+    private String upFace;
+    private String name;
+    private int flipCtr;
+    private int headsCtr;
+    private int tailsCtr;
+    private double bias;
+}
